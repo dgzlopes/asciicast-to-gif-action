@@ -2,9 +2,4 @@
 
 set -eu
 
-/bin/bash
-
-echo "Settings:"
-echo ""
-echo "theme: ${INPUT_THEME}"
-echo "speed: ${INPUT_SPEED}"
+/app/asciicast2gif -t ${INPUT_THEME} -s ${INPUT_SPEED} -S ${INPUT_SCALE} ${INPUT_INPUT} ${INPUT_OUTPUT}
