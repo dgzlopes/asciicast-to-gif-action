@@ -31,20 +31,22 @@ Example of generating GIF from asciicast URL, with default options:
 > :heavy_exclamation_mark: You need to add .cast (or .json) ext to the URL.
 
 ```yaml
-uses: actions/asciicast-to-gif-action@master
-with:
-  input: https://asciinema.org/a/234965.json
-  output: demo.gif
+- name: Asciicast URL to GIF
+  uses: dgzlopes/asciicast-to-gif-action@v1.0
+  with:
+    input: https://asciinema.org/a/234965.json
+    output: demo.gif
 ```
 
 
 Example of generating GIF from local asciicast file, with Tango theme, double speed and single pixel density:
 ```yaml
-uses: actions/asciicast-to-gif-action@master
-with:
-  input: 118274.json
-  output: demo.gif
-  theme: tango
-  speed: 2
-  scale: 1
+- name: Asciicast file to GIF
+  uses: dgzlopes/asciicast-to-gif-action@v1.0
+  with:
+    input: 118274.json
+    output: demo.gif
+    theme: tango
+    speed: 2
+    scale: 1
 ```
