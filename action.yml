@@ -1,0 +1,35 @@
+name: "Asciicast to GIF"
+author: "dgzlopes"
+description: "Generate GIF animations from asciicasts (asciinema recordings)."
+
+inputs:
+  input:
+    description: "Input JSON path or url"
+    required: true
+  
+  output:
+    description: "Output GIF path"
+    required: true
+
+  theme:
+    description: "Color theme"
+    required: false
+    default: "asciinema"
+
+  speed:
+    description: "Animation speed"
+    required: false
+    default: "1"
+
+  scale:
+    description: "Image scale / pixel density"
+    required: false
+    default: "2"
+
+runs:
+  using: "docker"
+  image: 'Dockerfile'
+
+branding:
+  icon: "image"
+  color: "red"
